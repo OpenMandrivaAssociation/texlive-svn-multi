@@ -59,6 +59,7 @@ necessary for the required output.
 %doc %{_texmfdistdir}/source/latex/svn-multi/svn-multi-pl.dtx
 %doc %{_texmfdistdir}/source/latex/svn-multi/svn-multi.dtx
 %doc %{_texmfdistdir}/source/latex/svn-multi/svn-multi.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -73,3 +74,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
