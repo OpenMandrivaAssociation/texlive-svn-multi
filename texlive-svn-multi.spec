@@ -1,12 +1,12 @@
-# revision 23782
+# revision 26231
 # category Package
 # catalog-ctan /macros/latex/contrib/svn-multi
-# catalog-date 2011-09-04 01:09:18 +0200
+# catalog-date 2011-11-11 12:03:47 +0100
 # catalog-license lppl
 # catalog-version 2.4d
 Name:		texlive-svn-multi
 Version:	2.4d
-Release:	2
+Release:	3
 Summary:	Subversion keywords in multi-file LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/svn-multi
@@ -44,7 +44,11 @@ necessary for the required output.
 %{_texmfdistdir}/tex/latex/svn-multi/svn-multi.sty
 %{_texmfdistdir}/tex/latex/svn-multi/svnkw.sty
 %doc %{_texmfdistdir}/doc/latex/svn-multi/README
+%doc %{_texmfdistdir}/doc/latex/svn-multi/example_chap1.tex
+%doc %{_texmfdistdir}/doc/latex/svn-multi/example_main.tex
+%doc %{_texmfdistdir}/doc/latex/svn-multi/group_example.tex
 %doc %{_texmfdistdir}/doc/latex/svn-multi/svn-multi.pdf
+%doc %{_texmfdistdir}/doc/support/svn-multi/svn-multi-pl.pdf
 #- source
 %doc %{_texmfdistdir}/source/latex/svn-multi/svn-multi-pl.dtx
 %doc %{_texmfdistdir}/source/latex/svn-multi/svn-multi.dtx
