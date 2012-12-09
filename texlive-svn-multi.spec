@@ -67,3 +67,25 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4d-4
++ Revision: 812885
+- Update to latest release.
+
+* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4d-3
++ Revision: 805102
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4d-2
++ Revision: 756361
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.4d-1
++ Revision: 719619
+- texlive-svn-multi
+- texlive-svn-multi
+- texlive-svn-multi
+- texlive-svn-multi
+
