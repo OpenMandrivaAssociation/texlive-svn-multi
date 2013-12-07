@@ -6,7 +6,7 @@
 # catalog-version 2.4d
 Name:		texlive-svn-multi
 Version:	2.4d
-Release:	6
+Release:	7
 Summary:	Subversion keywords in multi-file LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/svn-multi
