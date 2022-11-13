@@ -1,19 +1,13 @@
-# revision 26313
-# category Package
-# catalog-ctan /macros/latex/contrib/svn-multi
-# catalog-date 2012-05-07 15:25:51 +0200
-# catalog-license lppl
-# catalog-version 2.4d
 Name:		texlive-svn-multi
-Version:	2.4d
-Release:	13
+Version:	64967
+Release:	1
 Summary:	Subversion keywords in multi-file LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/svn-multi
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/svn-multi.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/svn-multi.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/svn-multi.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/svn-multi.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/svn-multi.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/svn-multi.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ interacts with an external Perl script, to retrieve information
 necessary for the required output.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -56,36 +50,15 @@ necessary for the required output.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/svn-multi/svn-multi.pl svn-multi
+ln -sf %{_texmfdistdir}/scripts/svn-multi/svn-multi.pl svn-multi
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4d-4
-+ Revision: 812885
-- Update to latest release.
-
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4d-3
-+ Revision: 805102
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4d-2
-+ Revision: 756361
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.4d-1
-+ Revision: 719619
-- texlive-svn-multi
-- texlive-svn-multi
-- texlive-svn-multi
-- texlive-svn-multi
-
