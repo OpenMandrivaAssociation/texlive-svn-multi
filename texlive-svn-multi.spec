@@ -1,5 +1,6 @@
 %global tl_name svn-multi
 %global tl_revision 79618
+%global tl_bin_links svn-multi:%{_texmfdistdir}/scripts/svn-multi/svn-multi.pl
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -16,6 +17,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(svn-multi.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 This package lets you typeset keywords of the version control system
